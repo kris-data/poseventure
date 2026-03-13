@@ -1,39 +1,54 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
 export function BusinessAnalysisSection() {
   return (
-    <section className="w-full py-32 bg-slate-50">
+    <section className="w-full py-24 bg-white">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-            Validate if your opportunity is worth building
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            Know if it's worth building
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Evaluate market potential, competition, and execution risks before committing to build.
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Once your opportunity is clear, PoseVenture helps you analyze whether it is truly worth building.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnalysisCard
-            title="Market potential"
-            description="Understand the addressable market size and growth opportunity"
+            title="TAM / SAM / SOM"
+            description="Total addressable market sizing and segmentation"
           />
           <AnalysisCard
-            title="Competitive landscape"
-            description="Analyze existing players and identify your positioning"
+            title="Competitor landscape"
+            description="Comprehensive competitive analysis and positioning"
           />
           <AnalysisCard
-            title="Revenue model"
-            description="Explore pricing strategies and monetization approaches"
+            title="Pricing benchmark"
+            description="Market-validated pricing strategies and models"
           />
           <AnalysisCard
-            title="Execution risks"
-            description="Identify key challenges and critical success factors"
+            title="Venture score"
+            description="Quantified opportunity assessment and viability"
+          />
+          <AnalysisCard
+            title="Investor readiness score"
+            description="Funding potential and pitch preparation metrics"
+          />
+          <AnalysisCard
+            title="Startup roadmap"
+            description="Phased execution plan with key milestones"
           />
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-slate-500 text-base font-medium">
-            Business analysis coming soon in Stage 2
-          </p>
+          <Button
+            size="lg"
+            asChild
+            className="px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium"
+          >
+            <Link href="/discover">Analyze This Opportunity</Link>
+          </Button>
         </div>
       </div>
     </section>
@@ -42,9 +57,9 @@ export function BusinessAnalysisSection() {
 
 function AnalysisCard({ title, description }: { title: string; description: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-semibold text-slate-900 mb-4">{title}</h3>
-      <p className="text-slate-600 leading-relaxed">{description}</p>
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+      <h3 className="text-base font-semibold text-slate-900 mb-2">{title}</h3>
+      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
     </div>
   );
 }

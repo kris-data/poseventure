@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PoseVenture",
-  description: "Discover venture opportunities from weak signals and evaluate which ideas are worth building.",
+  title: "PoseVenture - Find a Venture Opportunity Worth Building",
+  description: "Turn weak signals and rough ideas into structured venture opportunities. Discover, analyze, and validate opportunities with confidence.",
 };
 
 export default function RootLayout({
